@@ -27,8 +27,6 @@ class MainController extends Controller
         if (File::exists($path)) {
             $json = File::get($path);
             $articles = json_decode($json, true);
-            
-            // Берем статью по числовому индексу массива ($id)
             $articleItem = $articles[$id] ?? null;
         }
 
