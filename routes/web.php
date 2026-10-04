@@ -12,3 +12,4 @@ Route::view('/contacts', 'pages.contacts');
 Route::get('/signin', [AuthController::class, 'create'])->name('signin.form');
 Route::post('/signin', [AuthController::class, 'registration'])->name('signin.submit');
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::resource('/articles', ArticleController::class);

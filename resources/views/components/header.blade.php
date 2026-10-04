@@ -6,6 +6,7 @@
                 <li><a href="/" class="hover:text-primary transition-colors duration-100 active:text-secondary">Главная</a></li>
                 <li><a href="/about" class="hover:text-primary transition-colors duration-100 active:text-secondary">О нас</a></li>
                 <li><a href="/contacts" class="hover:text-primary transition-colors duration-100 active:text-secondary">Контакты</a></li>
+                <li><a href="/articles" class="hover:text-primary transition-colors duration-100 active:text-secondary">Статьи</a></li>
             </ul>
         </nav>
     </div>
