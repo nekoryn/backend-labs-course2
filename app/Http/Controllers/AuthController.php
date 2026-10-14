@@ -8,7 +8,7 @@ class AuthController extends Controller
 {
     public function create()
     {
-        return view('pages.signin');
+        return view('pages.auth.signin');
     }
 
     public function registration(Request $request)
