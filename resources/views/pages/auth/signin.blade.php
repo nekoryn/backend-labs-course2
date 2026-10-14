@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация — Fresh News</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/signin_submit.js'])
 </head>
 <body class="h-full flex flex-col min-h-screen bg-base-100 text-base-content">
     <x-header></x-header>
@@ -26,7 +26,8 @@
                 </div>
             @endif
 
-            <form action="{{ route('signin.submit') }}" method="POST" class="space-y-4">
+
+            <form id="signin_form" action="{{ route('signin.submit') }}" method="POST" class="space-y-4">
                 @csrf
                 
                 <div>
@@ -57,6 +58,8 @@
                             required
                             class="w-full px-4 py-2.5 rounded-xl bg-base-100 border border-base-300/50 focus:outline-none focus:ring-2 focus:ring-primary text-sm transition-all duration-200">
                 </div>
+
+                <div id="result-message" style="margin-top: 15px;"></div>
                 
                 <div class="pt-2">
                     <button type="submit" class="w-full py-2.5 px-4 rounded-xl bg-primary text-primary-content hover:opacity-90 font-medium text-sm transition-all duration-200 shadow-md">
